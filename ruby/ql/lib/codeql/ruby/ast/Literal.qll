@@ -596,14 +596,6 @@ class SymbolLiteral extends StringlikeLiteral, TSymbolLiteral {
   }
 }
 
-private class SimpleSymbolLiteral extends SymbolLiteral, TSimpleSymbolLiteral {
-  private Ruby::SimpleSymbol g;
-
-  SimpleSymbolLiteral() { this = TSimpleSymbolLiteral(g) }
-
-  final override string toString() { result = g.getValue() }
-}
-
 /**
  * A subshell literal.
  *
