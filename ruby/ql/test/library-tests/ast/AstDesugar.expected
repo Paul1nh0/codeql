@@ -310,6 +310,7 @@ literals/literals.rb:
 #   88|     getReceiver: [ConstantReadAccess] Hash
 #   88|     getArgument: [Pair] Pair
 #   88|       getKey: [SymbolLiteral] :foo
+#   88|         getComponent: [StringTextComponent] foo
 #   88|       getValue: [StringLiteral] "bar"
 #   88|         getComponent: [StringTextComponent] bar
 #   96| [ArrayLiteral] [...]
@@ -460,9 +461,11 @@ literals/literals.rb:
 #  117|     getReceiver: [ConstantReadAccess] Hash
 #  117|     getArgument: [Pair] Pair
 #  117|       getKey: [SymbolLiteral] :foo
+#  117|         getComponent: [StringTextComponent] foo
 #  117|       getValue: [IntegerLiteral] 1
 #  117|     getArgument: [Pair] Pair
 #  117|       getKey: [SymbolLiteral] :bar
+#  117|         getComponent: [StringTextComponent] bar
 #  117|       getValue: [IntegerLiteral] 2
 #  117|     getArgument: [Pair] Pair
 #  117|       getKey: [StringLiteral] "baz"
@@ -473,6 +476,7 @@ literals/literals.rb:
 #  118|     getReceiver: [ConstantReadAccess] Hash
 #  118|     getArgument: [Pair] Pair
 #  118|       getKey: [SymbolLiteral] :foo
+#  118|         getComponent: [StringTextComponent] foo
 #  118|       getValue: [IntegerLiteral] 7
 #  118|     getArgument: [HashSplatExpr] ** ...
 #  118|       getAnOperand/getOperand/getReceiver: [MethodCall] call to baz
@@ -482,18 +486,22 @@ literals/literals.rb:
 #  185|     getReceiver: [ConstantReadAccess] Hash
 #  185|     getArgument: [Pair] Pair
 #  185|       getKey: [SymbolLiteral] :x
+#  185|         getComponent: [StringTextComponent] x
 #  185|       getValue: [LocalVariableAccess] x
 #  185|     getArgument: [Pair] Pair
 #  185|       getKey: [SymbolLiteral] :y
+#  185|         getComponent: [StringTextComponent] y
 #  185|       getValue: [IntegerLiteral] 5
 #  186| [HashLiteral] {...}
 #  186|   getDesugared: [MethodCall] call to []
 #  186|     getReceiver: [ConstantReadAccess] Hash
 #  186|     getArgument: [Pair] Pair
 #  186|       getKey: [SymbolLiteral] :y
+#  186|         getComponent: [StringTextComponent] y
 #  186|       getValue: [MethodCall] call to y
 #  186|     getArgument: [Pair] Pair
 #  186|       getKey: [SymbolLiteral] :Z
+#  186|         getComponent: [StringTextComponent] Z
 #  186|       getValue: [ConstantReadAccess] Z
 control/loops.rb:
 #    9| [ForExpr] for ... in ...
@@ -578,9 +586,11 @@ control/loops.rb:
 #   22|         getReceiver: [ConstantReadAccess] Hash
 #   22|         getArgument: [Pair] Pair
 #   22|           getKey: [SymbolLiteral] :foo
+#   22|             getComponent: [StringTextComponent] foo
 #   22|           getValue: [IntegerLiteral] 0
 #   22|         getArgument: [Pair] Pair
 #   22|           getKey: [SymbolLiteral] :bar
+#   22|             getComponent: [StringTextComponent] bar
 #   22|           getValue: [IntegerLiteral] 1
 #   28| [ForExpr] for ... in ...
 #   28|   getDesugared: [MethodCall] call to each
@@ -622,9 +632,11 @@ control/loops.rb:
 #   28|         getReceiver: [ConstantReadAccess] Hash
 #   28|         getArgument: [Pair] Pair
 #   28|           getKey: [SymbolLiteral] :foo
+#   28|             getComponent: [StringTextComponent] foo
 #   28|           getValue: [IntegerLiteral] 0
 #   28|         getArgument: [Pair] Pair
 #   28|           getKey: [SymbolLiteral] :bar
+#   28|             getComponent: [StringTextComponent] bar
 #   28|           getValue: [IntegerLiteral] 1
 #   36| [AssignAddExpr] ... += ...
 #   36|   getDesugared: [AssignExpr] ... = ...
@@ -696,9 +708,11 @@ operations/operations.rb:
 #   29|     getReceiver: [ConstantReadAccess] Hash
 #   29|     getArgument: [Pair] Pair
 #   29|       getKey: [SymbolLiteral] :b
+#   29|         getComponent: [StringTextComponent] b
 #   29|       getValue: [IntegerLiteral] 4
 #   29|     getArgument: [Pair] Pair
 #   29|       getKey: [SymbolLiteral] :c
+#   29|         getComponent: [StringTextComponent] c
 #   29|       getValue: [IntegerLiteral] 5
 #   69| [AssignAddExpr] ... += ...
 #   69|   getDesugared: [AssignExpr] ... = ...

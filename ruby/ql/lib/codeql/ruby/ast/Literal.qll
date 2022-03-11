@@ -226,17 +226,48 @@ class StringComponent extends AstNode, TStringComponent {
  * ```
  */
 class StringTextComponent extends StringComponent, TStringTextComponentNonRegexp {
+  final override string getAPrimaryQlClass() { result = "StringTextComponent" }
+}
+
+private class StringTextComponentStringOrHeredocContent extends StringTextComponent,
+  TStringTextComponentNonRegexpStringOrHeredocContent {
   private Ruby::Token g;
 
-  StringTextComponent() { this = TStringTextComponentNonRegexp(g) }
+  StringTextComponentStringOrHeredocContent() {
+    this = TStringTextComponentNonRegexpStringOrHeredocContent(g)
+  }
 
   final override string toString() { result = g.getValue() }
 
   final override ConstantValue::ConstantStringValue getConstantValue() {
     result.isString(g.getValue())
   }
+}
 
-  final override string getAPrimaryQlClass() { result = "StringTextComponent" }
+private class StringTextComponentSimpleSymbol extends StringTextComponent,
+  TStringTextComponentNonRegexpSimpleSymbol {
+  private Ruby::SimpleSymbol g;
+
+  StringTextComponentSimpleSymbol() { this = TStringTextComponentNonRegexpSimpleSymbol(g) }
+
+  final override string toString() { result = getSimpleSymbolValue(g) }
+
+  final override ConstantValue::ConstantStringValue getConstantValue() {
+    result.isString(getSimpleSymbolValue(g))
+  }
+}
+
+private class StringTextComponentHashKeySymbol extends StringTextComponent,
+  TStringTextComponentNonRegexpHashKeySymbol {
+  private Ruby::HashKeySymbol g;
+
+  StringTextComponentHashKeySymbol() { this = TStringTextComponentNonRegexpHashKeySymbol(g) }
+
+  final override string toString() { result = g.getValue() }
+
+  final override ConstantValue::ConstantStringValue getConstantValue() {
+    result.isString(g.getValue())
+  }
 }
 
 /**
@@ -569,10 +600,6 @@ private class SimpleSymbolLiteral extends SymbolLiteral, TSimpleSymbolLiteral {
   private Ruby::SimpleSymbol g;
 
   SimpleSymbolLiteral() { this = TSimpleSymbolLiteral(g) }
-
-  final override ConstantValue::ConstantSymbolValue getConstantValue() {
-    result.isSymbol(getSimpleSymbolValue(g))
-  }
 
   final override string toString() { result = g.getValue() }
 }

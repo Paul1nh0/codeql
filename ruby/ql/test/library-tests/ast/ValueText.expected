@@ -150,20 +150,11 @@ exprValue
 | control/cases.rb:49:12:49:12 | 4 | 4 |
 | control/cases.rb:50:9:50:9 | 3 | 3 |
 | control/cases.rb:51:10:51:10 | 3 | 3 |
-| control/cases.rb:52:6:52:6 | :a | :a |
-| control/cases.rb:53:6:53:6 | :a | :a |
 | control/cases.rb:53:9:53:9 | 5 | 5 |
-| control/cases.rb:54:6:54:6 | :a | :a |
 | control/cases.rb:54:9:54:9 | 5 | 5 |
-| control/cases.rb:55:6:55:6 | :a | :a |
 | control/cases.rb:55:9:55:9 | 5 | 5 |
-| control/cases.rb:55:12:55:12 | :b | :b |
-| control/cases.rb:56:6:56:6 | :a | :a |
 | control/cases.rb:56:9:56:9 | 5 | 5 |
-| control/cases.rb:56:12:56:12 | :b | :b |
-| control/cases.rb:57:6:57:6 | :a | :a |
 | control/cases.rb:57:9:57:9 | 5 | 5 |
-| control/cases.rb:57:12:57:12 | :b | :b |
 | control/cases.rb:59:7:59:7 | 5 | 5 |
 | control/cases.rb:60:7:60:7 | 5 | 5 |
 | control/cases.rb:61:7:61:7 | 1 | 1 |
@@ -185,20 +176,11 @@ exprValue
 | control/cases.rb:68:14:68:14 | 4 | 4 |
 | control/cases.rb:69:10:69:10 | 3 | 3 |
 | control/cases.rb:70:11:70:11 | 3 | 3 |
-| control/cases.rb:71:7:71:7 | :a | :a |
-| control/cases.rb:72:7:72:7 | :a | :a |
 | control/cases.rb:72:10:72:10 | 5 | 5 |
-| control/cases.rb:73:7:73:7 | :a | :a |
 | control/cases.rb:73:10:73:10 | 5 | 5 |
-| control/cases.rb:74:7:74:7 | :a | :a |
 | control/cases.rb:74:10:74:10 | 5 | 5 |
-| control/cases.rb:74:13:74:13 | :b | :b |
-| control/cases.rb:75:7:75:7 | :a | :a |
 | control/cases.rb:75:10:75:10 | 5 | 5 |
-| control/cases.rb:75:13:75:13 | :b | :b |
-| control/cases.rb:76:7:76:7 | :a | :a |
 | control/cases.rb:76:10:76:10 | 5 | 5 |
-| control/cases.rb:76:13:76:13 | :b | :b |
 | control/cases.rb:84:7:84:8 | 42 | 42 |
 | control/cases.rb:87:6:87:6 | 5 | 5 |
 | control/cases.rb:88:7:88:9 | foo | 42 |
@@ -235,14 +217,8 @@ exprValue
 | control/cases.rb:130:11:130:11 | 1 | 1 |
 | control/cases.rb:130:14:130:14 | 2 | 2 |
 | control/cases.rb:131:18:131:18 | 1 | 1 |
-| control/cases.rb:139:7:139:7 | :x | :x |
-| control/cases.rb:140:16:140:16 | :x | :x |
 | control/cases.rb:140:18:140:18 | 1 | 1 |
-| control/cases.rb:141:16:141:16 | :x | :x |
 | control/cases.rb:141:18:141:18 | 1 | 1 |
-| control/cases.rb:141:21:141:21 | :a | :a |
-| control/cases.rb:142:11:142:11 | :y | :y |
-| control/cases.rb:144:11:144:11 | :a | :a |
 | control/cases.rb:144:14:144:14 | 1 | 1 |
 | control/cases.rb:148:7:148:9 | foo | 42 |
 | control/cases.rb:155:8:155:10 | foo | 42 |
@@ -782,9 +758,7 @@ exprCfgNodeValue
 | calls/calls.rb:26:7:26:7 | 1 | 1 |
 | calls/calls.rb:36:9:36:11 | 100 | 100 |
 | calls/calls.rb:36:14:36:16 | 200 | 200 |
-| calls/calls.rb:278:5:278:8 | :blah | : |
 | calls/calls.rb:278:5:278:8 | :blah | :blah |
-| calls/calls.rb:279:5:279:8 | :blah | : |
 | calls/calls.rb:279:5:279:8 | :blah | :blah |
 | calls/calls.rb:288:11:288:16 | "blah" | blah |
 | calls/calls.rb:289:11:289:11 | 1 | 1 |
@@ -840,17 +814,12 @@ exprCfgNodeValue
 | calls/calls.rb:340:27:340:27 | 4 | 4 |
 | calls/calls.rb:340:29:340:29 | 5 | 5 |
 | calls/calls.rb:340:31:340:31 | 6 | 6 |
-| calls/calls.rb:344:5:344:5 | :x | : |
 | calls/calls.rb:344:5:344:5 | :x | :x |
 | calls/calls.rb:344:8:344:9 | 42 | 42 |
-| calls/calls.rb:345:5:345:5 | :x | : |
 | calls/calls.rb:345:5:345:5 | :x | :x |
-| calls/calls.rb:345:9:345:13 | :novar | : |
 | calls/calls.rb:345:9:345:13 | :novar | :novar |
-| calls/calls.rb:346:5:346:5 | :X | : |
 | calls/calls.rb:346:5:346:5 | :X | :X |
 | calls/calls.rb:346:8:346:9 | 42 | 42 |
-| calls/calls.rb:347:5:347:5 | :X | : |
 | calls/calls.rb:347:5:347:5 | :X | :X |
 | constants/constants.rb:3:19:3:27 | "const_a" | const_a |
 | constants/constants.rb:6:15:6:23 | "const_b" | const_b |
@@ -980,7 +949,6 @@ exprCfgNodeValue
 | control/cases.rb:100:45:100:52 | __FILE__ | control/cases.rb |
 | control/cases.rb:100:56:100:67 | __ENCODING__ | UTF-8 |
 | control/cases.rb:101:18:101:19 | 10 | 10 |
-| control/cases.rb:102:6:102:9 | :foo | : |
 | control/cases.rb:102:6:102:9 | :foo | :foo |
 | control/cases.rb:103:6:103:15 | :"foo bar" | :foo bar |
 | control/cases.rb:104:6:104:7 | - ... | -5 |
@@ -1069,18 +1037,14 @@ exprCfgNodeValue
 | control/loops.rb:16:13:16:14 | 10 | 10 |
 | control/loops.rb:22:5:22:7 | 0 | 0 |
 | control/loops.rb:22:10:22:14 | 1 | 1 |
-| control/loops.rb:22:20:22:22 | :foo | : |
 | control/loops.rb:22:20:22:22 | :foo | :foo |
 | control/loops.rb:22:25:22:25 | 0 | 0 |
-| control/loops.rb:22:28:22:30 | :bar | : |
 | control/loops.rb:22:28:22:30 | :bar | :bar |
 | control/loops.rb:22:33:22:33 | 1 | 1 |
 | control/loops.rb:28:6:28:8 | 0 | 0 |
 | control/loops.rb:28:11:28:15 | 1 | 1 |
-| control/loops.rb:28:22:28:24 | :foo | : |
 | control/loops.rb:28:22:28:24 | :foo | :foo |
 | control/loops.rb:28:27:28:27 | 0 | 0 |
-| control/loops.rb:28:30:28:32 | :bar | : |
 | control/loops.rb:28:30:28:32 | :bar | :bar |
 | control/loops.rb:28:35:28:35 | 1 | 1 |
 | control/loops.rb:35:11:35:11 | y | 0 |
@@ -1219,11 +1183,9 @@ exprCfgNodeValue
 | literals/literals.rb:80:1:80:8 | ?\\M-\\C-a | ?\\M-\\C-a |
 | literals/literals.rb:81:1:81:8 | ?\\C-\\M-a | ?\\C-\\M-a |
 | literals/literals.rb:84:1:84:3 | :"" | : |
-| literals/literals.rb:85:1:85:6 | :hello | : |
 | literals/literals.rb:85:1:85:6 | :hello | :hello |
 | literals/literals.rb:86:1:86:10 | :"foo bar" | :foo bar |
 | literals/literals.rb:87:1:87:10 | :"bar baz" | :bar baz |
-| literals/literals.rb:88:3:88:5 | :foo | : |
 | literals/literals.rb:88:3:88:5 | :foo | :foo |
 | literals/literals.rb:88:8:88:12 | "bar" | bar |
 | literals/literals.rb:89:1:89:10 | :"wibble" | :wibble |
@@ -1302,15 +1264,12 @@ exprCfgNodeValue
 | literals/literals.rb:113:22:113:27 | :"#{bar}" | :#{bar} |
 | literals/literals.rb:113:29:113:34 | :"#{BAR}" | :#{BAR} |
 | literals/literals.rb:113:36:113:38 | :"baz" | :baz |
-| literals/literals.rb:117:3:117:5 | :foo | : |
 | literals/literals.rb:117:3:117:5 | :foo | :foo |
 | literals/literals.rb:117:8:117:8 | 1 | 1 |
-| literals/literals.rb:117:11:117:14 | :bar | : |
 | literals/literals.rb:117:11:117:14 | :bar | :bar |
 | literals/literals.rb:117:19:117:19 | 2 | 2 |
 | literals/literals.rb:117:22:117:26 | "baz" | baz |
 | literals/literals.rb:117:31:117:31 | 3 | 3 |
-| literals/literals.rb:118:3:118:5 | :foo | : |
 | literals/literals.rb:118:3:118:5 | :foo | :foo |
 | literals/literals.rb:118:8:118:8 | 7 | 7 |
 | literals/literals.rb:121:2:121:2 | 1 | 1 |
@@ -1376,20 +1335,15 @@ exprCfgNodeValue
 | literals/literals.rb:167:9:167:19 | <<~SQUIGGLY | \n   indented stuff\n |
 | literals/literals.rb:180:10:180:19 | <<`SCRIPT` | \n cat file.txt\n |
 | literals/literals.rb:184:5:184:6 | 42 | 42 |
-| literals/literals.rb:185:2:185:2 | :x | : |
 | literals/literals.rb:185:2:185:2 | :x | :x |
 | literals/literals.rb:185:2:185:2 | x | 42 |
-| literals/literals.rb:185:6:185:6 | :y | : |
 | literals/literals.rb:185:6:185:6 | :y | :y |
 | literals/literals.rb:185:8:185:8 | 5 | 5 |
-| literals/literals.rb:186:2:186:2 | :y | : |
 | literals/literals.rb:186:2:186:2 | :y | :y |
-| literals/literals.rb:186:7:186:7 | :Z | : |
 | literals/literals.rb:186:7:186:7 | :Z | :Z |
 | misc/misc.erb:2:15:2:37 | "main_include_admin.js" | main_include_admin.js |
 | misc/misc.rb:1:7:1:11 | "bar" | bar |
 | misc/misc.rb:3:7:3:9 | foo | foo |
-| misc/misc.rb:3:12:3:15 | :foo | : |
 | misc/misc.rb:3:12:3:15 | :foo | :foo |
 | misc/misc.rb:3:18:3:21 | foo= | foo= |
 | misc/misc.rb:3:24:3:25 | [] | [] |
@@ -1403,7 +1357,6 @@ exprCfgNodeValue
 | misc/misc.rb:5:25:5:29 | super | super |
 | misc/misc.rb:5:32:5:35 | self | self |
 | misc/misc.rb:7:7:7:9 | new | new |
-| misc/misc.rb:7:11:7:14 | :old | : |
 | misc/misc.rb:7:11:7:14 | :old | :old |
 | misc/misc.rb:8:7:8:10 | foo= | foo= |
 | misc/misc.rb:8:12:8:14 | []= | []= |
@@ -1413,7 +1366,6 @@ exprCfgNodeValue
 | misc/misc.rb:10:11:10:16 | #{...} | bar |
 | misc/misc.rb:10:13:10:15 | bar | bar |
 | misc/misc.rb:10:19:10:24 | :"foo" | :foo |
-| modules/classes.rb:11:28:11:31 | :baz | : |
 | modules/classes.rb:11:28:11:31 | :baz | :baz |
 | modules/classes.rb:22:10:22:12 | "a" | a |
 | modules/classes.rb:26:10:26:12 | "b" | b |
@@ -1463,13 +1415,10 @@ exprCfgNodeValue
 | operations/operations.rb:28:10:28:12 | foo | 0 |
 | operations/operations.rb:29:17:29:17 | 1 | 1 |
 | operations/operations.rb:29:22:29:22 | 2 | 2 |
-| operations/operations.rb:29:26:29:26 | :a | : |
 | operations/operations.rb:29:26:29:26 | :a | :a |
 | operations/operations.rb:29:28:29:28 | 3 | 3 |
-| operations/operations.rb:29:34:29:34 | :b | : |
 | operations/operations.rb:29:34:29:34 | :b | :b |
 | operations/operations.rb:29:36:29:36 | 4 | 4 |
-| operations/operations.rb:29:39:29:39 | :c | : |
 | operations/operations.rb:29:39:29:39 | :c | :c |
 | operations/operations.rb:29:41:29:41 | 5 | 5 |
 | operations/operations.rb:32:1:32:1 | w | 0 |
@@ -1561,10 +1510,8 @@ exprCfgNodeValue
 | operations/operations.rb:95:15:95:15 | 5 | 5 |
 | operations/operations.rb:96:16:96:16 | 6 | 6 |
 | params/params.rb:41:46:41:46 | 7 | 7 |
-| params/params.rb:47:19:47:21 | :bar | : |
 | params/params.rb:47:19:47:21 | :bar | :bar |
 | params/params.rb:47:24:47:24 | 2 | 2 |
-| params/params.rb:47:27:47:29 | :foo | : |
 | params/params.rb:47:27:47:29 | :foo | :foo |
 | params/params.rb:47:32:47:32 | 3 | 3 |
 | params/params.rb:49:37:49:39 | 100 | 100 |

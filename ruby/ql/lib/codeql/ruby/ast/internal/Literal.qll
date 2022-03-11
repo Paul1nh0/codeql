@@ -146,10 +146,19 @@ private class RequiredFileLiteralConstantValue extends RequiredConstantValue {
   }
 }
 
-private class RequiredStringTextComponentConstantValue extends RequiredConstantValue {
+private class RequiredStringTextComponentNonRegexpStringOrHeredocContentConstantValue extends RequiredConstantValue {
   override predicate requiredString(string s) {
-    s = any(Ruby::Token t | exists(TStringTextComponentNonRegexp(t))).getValue()
+    s =
+      any(Ruby::Token t | exists(TStringTextComponentNonRegexpStringOrHeredocContent(t))).getValue()
   }
+}
+
+private class RequiredStringTextComponentNonRegexpSimpleSymbolConstantValue extends RequiredConstantValue {
+  override predicate requiredString(string s) { s = getSimpleSymbolValue(_) }
+}
+
+private class RequiredStringTextComponentNonRegexpHashKeySymbolConstantValue extends RequiredConstantValue {
+  override predicate requiredString(string s) { s = any(Ruby::HashKeySymbol h).getValue() }
 }
 
 private class RequiredStringEscapeSequenceComponentConstantValue extends RequiredConstantValue {
@@ -209,20 +218,14 @@ class BareStringLiteral extends StringLiteral, TBareStringLiteral {
 // Tree-sitter gives us value text including the colon, which we skip.
 string getSimpleSymbolValue(Ruby::SimpleSymbol ss) { result = ss.getValue().suffix(1) }
 
-private class RequiredSimpleSymbolConstantValue extends RequiredConstantValue {
-  override predicate requiredSymbol(string s) { s = getSimpleSymbolValue(_) }
-}
-
 private class SimpleSymbolLiteral extends SymbolLiteral, TSimpleSymbolLiteral {
   private Ruby::SimpleSymbol g;
 
   SimpleSymbolLiteral() { this = TSimpleSymbolLiteral(g) }
 
-  final override ConstantValue::ConstantSymbolValue getConstantValue() {
-    result.isSymbol(getSimpleSymbolValue(g))
-  }
-
   final override string toString() { result = g.getValue() }
+
+  final override StringComponent getComponent(int n) { n = 0 and toGenerated(result) = g }
 }
 
 class ComplexSymbolLiteral extends SymbolLiteral, TComplexSymbolLiteral { }
@@ -243,20 +246,14 @@ class BareSymbolLiteral extends ComplexSymbolLiteral, TBareSymbolLiteral {
   final override StringComponent getComponent(int i) { toGenerated(result) = g.getChild(i) }
 }
 
-private class RequiredHashKeySymbolConstantValue extends RequiredConstantValue {
-  override predicate requiredSymbol(string s) { s = any(Ruby::HashKeySymbol h).getValue() }
-}
-
 private class HashKeySymbolLiteral extends SymbolLiteral, THashKeySymbolLiteral {
   private Ruby::HashKeySymbol g;
 
   HashKeySymbolLiteral() { this = THashKeySymbolLiteral(g) }
 
-  final override ConstantValue::ConstantSymbolValue getConstantValue() {
-    result.isSymbol(g.getValue())
-  }
-
   final override string toString() { result = ":" + g.getValue() }
+
+  final override StringComponent getComponent(int n) { n = 0 and toGenerated(result) = g }
 }
 
 private class RequiredCharacterConstantValue extends RequiredConstantValue {
